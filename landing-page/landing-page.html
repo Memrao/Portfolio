@@ -493,14 +493,12 @@
         /*Footer-------------------------------------------------------*/
         
         .footer {
-            position: relative;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
             width: 100%;
+            left: 0;
+            bottom: 0;
             max-width: 1200px;
-            padding: 1rem;
             margin: 0 auto;
+            padding: 1rem;
             background: #FFB6C1;
             border: 1px solid #000000;
             border-radius: 8px;
@@ -597,6 +595,31 @@
         
         .footer-col .icons i:hover {
             color: #fff;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .footer-bottom hr {
+            border: 0;
+            border-top: 1px solid black;
+            margin: 20px 0;
+        }
+        
+        .footer-bottom p {
+            color: black;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .footer-bottom a:hover {
+            color: #FFB6C1;
         }
         
         @media (max-width: 768px) {
@@ -827,7 +850,6 @@
                     <ul class="links">
                         <li><a href="#">Customer Agreement</a></li>
                         <li><a href="#">Privacy Policy</a></li>
-
                         <li><a href="#">Security</a></li>
                         <li><a href="#">Testimonials</a></li>
                         <li><a href="#">Media Kit</a></li>
@@ -847,12 +869,15 @@
                         <i class="fa-brands fa-twitter"></i>
                         <i class="fa-brands fa-linkedin"></i>
                         <i class="fa-brands fa-github"></i>
-
-
                     </div>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2024 Memona Nisar. All Rights Reserved | <a href="#">Privacy Policy</a></p>
+            </div>
         </section>
+
 
 
 
