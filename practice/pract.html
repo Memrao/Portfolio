@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 100%;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: rgb(0, 0, 0);
+            box-sizing: border-box;
+            margin-right: 30px;
+        }
+        
+        .content h2 {
+            color: white;
+            font-weight: bold;
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        
+        .content h1 {
+            color: rgb(227, 179, 74);
+            font-size: 3.2rem;
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 13px;
+        }
+        
+        .btn-black {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            height: 46px;
+            width: 80px;
+            border-radius: 1.6rem;
+            border-color: rgb(227, 179, 74);
+            border-style: inset;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .btn-black:hover,
+        .btn-black:focus {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+        
+        .image-wrapper {
+            flex: 1;
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            margin-left: 15%;
+            padding: 6%;
+            image-rendering: auto;
+        }
+        
+        .image-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('33.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .image-wrapper img {
+            width: 100%;
+            max-height: 530px;
+            object-fit: cover;
+        }
+        /* Skill section */
+        
+        .about-profile-skills {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            gap: 20px;
+            flex-direction: row;
+            height: auto;
+        }
+        
+        .about .text {
+            flex: 1;
+            padding: 0 20px;
+            color: white;
+        }
+        
+        .img1 {
+            border-radius: 10rem;
+            width: 15%;
+            height: auto;
+            margin-right: 20px;
+            /* Adjust space between image and text */
+        }
+        
+        .profile-skills {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .profile-section,
+        .skills-section {
+            flex: 1;
+            padding: 20px;
+            background: rgb(227, 179, 74);
+            border-radius: 10px;
+        }
+        
+        .profile-section {
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .profile-section p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .profile-section p strong {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .profile-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .profile-section h3 {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+        
+        .skills-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+        
+        .skills-section .skill-item {
+            margin: 10px 0;
+            width: 100%;
+        }
+        
+        .skills-section .skill-item .skill-name {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .skills-section .skill-item .progress {
+            width: 100%;
+            height: 8px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skills-section .skill-item .progress-bar {
+            height: 100%;
+            background-color: #2e2d2d;
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+        
+        .buttons-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .work-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .work-section .project {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .work-section .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .work-section .project h3 {
+            margin: 10px 0;
+        }
+        
+        .work-section .project p {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section,
+            .about-profile-skills {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-wrapper,
+            .about-profile-skills {
+                width: 100%;
+                text-align: center;
+            }
+            .img1 {
+                width: 50%;
+                border-radius: 20rem;
+            }
+            .profile-section,
+            .skills-section,
+            .work-section {
+                width: 100%;
+                margin: 0;
+            }
+            .profile-section {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        
+        section.services {
+            height: auto;
+            width: 100%;
+            padding: 2em 0;
+            display: grid;
+            place-items: center;
+        }
+        
+        .section-heading {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .services .icon-1 {
+            color: white;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        /* Card styles */
+        
+        .row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            text-align: center;
+            justify-items: center;
+        }
+        
+        .card {
+            width: 20vw;
+            height: 20vw;
+            padding: 1.5em;
+            background: linear-gradient(rgb(227, 179, 74) 50%, #050a12 50%);
+            background-size: 100% 200%;
+            background-position: 0 2.5%;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.22);
+            cursor: pointer;
+            transition: background-position 0.5s ease;
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .icon-wrapper {
+            background-color: #050a12;
+            font-size: 1.4rem;
+            height: 2em;
+            width: 2em;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            place-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            transition: 0.5s;
+        }
+        
+        .card:hover {
+            background-position: 0 100%;
+        }
+        
+        .card:hover .icon-wrapper {
+            background-color: #ffffff;
+            color: #050a12;
+        }
+        
+        .card:hover h3 {
+            color: #ffffff;
+        }
+        
+        .card:hover p {
+            color: #f0f0f0;
+        }
+        /* Contact Section ....................................*/
+        
+        .contact {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgb(227, 179, 74);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .contact-form h3 {
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: white;
+            color: rgb(0, 0, 0);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgb(0, 0, 0);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+        }
+        
+        button[type="submit"] {
+            background-color: rgb(227, 179, 74);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: white;
+            color: rgb(227, 179, 74);
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 15px;
+            }
+            .form-row {
+                flex-direction: column;
+            }
+            .form-group {
+                min-width: auto;
+                margin-bottom: 15px;
+            }
+            button[type="submit"] {
+                font-size: 1.1rem;
+                padding: 10px;
+            }
+        }
+        /* Footer Section */
+        
+        .footer {
+            background: rgb(0, 0, 0);
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            overflow-x: none;
+        }
+        
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 90%;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-col h4 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-col ul li {
+            margin: 10px 0;
+        }
+        
+        .footer-col ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col ul li a:hover {
+            color: rgb(227, 179, 74);
+        }
+        
+        .footer-col .icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .footer-col .icons i {
+            font-size: 1.5rem;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col .icons i:hover {
+            color: rgb(227, 179, 74);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+        
+        .footer-bottom p {
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer-bottom a:hover {
+            color: rgb(227, 179, 74);
+        }
+        
+        .footer-bottom hr {
+            border: 0;
+            border-top: 1px solid #000000;
+            margin: 0;
+            width: 100%;
+            max-width: 300%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="section">
+            <div class="content">
+                <h1>Welcome to My Portfolio</h1>
+                <h2>Memona Nisar Ahmed</h2>
+                <div class="buttons">
+                    <a class="btn-black">About Me</a>
+                    <a class="btn-black">My Work</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="112.png" alt="Portfolio Image">
+            </div>
+        </header>
+
+        <!-- About Profile and Skills Section ---------------------------->
+        <section class="about-profile-skills">
+            <div class="about">
+                <img src="111.jpg" alt="About Me" class="img1">
+                <div class="text">
+                    <h2>About Me</h2>
+                    <p>Hi' I am Memona Nisar , Studying In Software Engineering from PAF kiet University.I am Obssesed With Frontend Development and have to persue my career in this fied.</p>
+                </div>
+            </div>
+            <div class="profile-skills">
+                <div class="profile-section">
+                    <h2>My Profile</h2>
+                    <p><strong>Education:</strong> Bachelor of Engineering in Software Engineering (BESE)</p>
+                    <p><strong>Experience:</strong> 3 Years in Web Development</p>
+                    <p><strong>Skills:</strong> HTML,CSS,JavaScript, Python, React, Node.js</p>
+                </div>
+                <div class="skills-section">
+                    <h2>Skills</h2>
+
+                    <div class="skill-item">
+                        <span class="skill-name">HTML</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Node.js</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services and project Section ------------------------------------------->
+        <section class="services">
+            <div class="icon-1">
+                <h1>My Projects</h1>
+            </div>
+
+
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-microchip"></i></i>
+                        </div>
+                        <h3>RFID Attendence System</h3>
+                        <p>This System Provides E-Attendence.Students just need to show their card.The system will mark present.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-house-medical"></i>
+                        </div>
+                        <h3>Hospital System</h3>
+                        <p>This was for patients online treatment.The Project was made using C# and mysql.Desktop Application</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-fingerprint"></i>
+                        </div>
+                        <h3>Finger Print Attendence System</h3>
+                        <p>Attendence Through Finger print.This system Saves time. easy to understand and use.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-user-minus"></i>
+                        </div>
+                        <h3>Forensic Investigation</h3>
+                        <p>This system recognize theifs and terrorist. easy to understand and use.It will helpful for police</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3>chatBot</h3>
+                        <p>This product helps to generate pdf and download it directcly.Anytime type of pdf can be generated</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3>Online Reservation sys </h3>
+                        <p>Train tickets can be booked online using mobile,laptop or tablet etc.It saves Time of the traveler</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section --------------------------------------------->
+        <section class="contact">
+            <div class="contact-form">
+                <h3>My Contact</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </section>
+
+
+
+
+        <!-- Footer ---------------------------------------------->
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul class="links">
+                        <li><a href="#">About </a></li>
+                        <li><a href="#">Compressions</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="links">
+                        <li><a href="#">Free Designs</a></li>
+                        <li><a href="#">Latest Designs</a></li>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Popular Designs</a></li>
+                        <li><a href="#">Art Skills</a></li>
+                        <li><a href="#">New Uploads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="links">
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
+                    </p>
+                    <form action="#" class="place">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2024 Memona Nisar. All Rights Reserved | <a href="#">Privacy Policy</a></p>
+            </div>
+        </section>

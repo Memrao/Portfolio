@@ -17,8 +17,8 @@
 
     <style>
         body {
-            background: radial-gradient(circle, #FFC0CB, #FFB6C1);
-            margin: 0;
+            background: radial-gradient(circle, #f39eac, #FFB6C1);
+            /*margin: 0;*/
             font-family: 'Poppins', sans-serif;
         }
         
@@ -38,7 +38,7 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
-            min-height: 100vh;
+            min-height: 100%;
         }
         
         .content {
@@ -153,6 +153,8 @@
             display: flex;
             flex-direction: row;
             gap: 20px;
+            width: 100%;
+            height: 100%;
         }
         
         .profile-section,
@@ -183,18 +185,18 @@
         
         .profile-section h2 {
             color: #333;
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 15px;
         }
         
         .profile-section h3 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: #333;
         }
         
         .skills-section h2 {
             color: #333;
-            font-size: 3rem;
+            font-size: 2rem;
         }
         
         .skills-section .skill-item {
@@ -233,6 +235,8 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            height: 100%;
+            width: 100%;
         }
         
         .work-section .project {
@@ -398,12 +402,14 @@
             align-items: center;
             padding: 20px;
             width: 100%;
+            height: 100%;
             box-sizing: border-box;
             gap: 20px;
         }
         
         .contact-form {
             width: 100%;
+            height: 100%;
             max-width: 800px;
             padding: 20px;
             background-size: cover;
@@ -494,11 +500,8 @@
         
         .footer {
             width: 100%;
-            left: 0;
-            bottom: 0;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
+            padding: 50px;
             background: #FFB6C1;
             border: 1px solid #000000;
             border-radius: 8px;
@@ -510,7 +513,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 3rem;
+            gap: 1rem;
             padding: 50px;
         }
         
@@ -666,221 +669,217 @@
             </div>
         </section>
 
-        <!-- About Profile and Skills Section ---------------------------->
-        <section class="about-profile-skills">
-            <div class="about">
-                <img src="44.jpg" alt="About Me" class="img1">
-                <div class="text">
-                    <h2>About Me</h2>
-                    <p>Hi' I am Memona Nisar , Studying In Software Engineering from PAF kiet University.I am Obssesed With Frontend Development and have to persue my career in this fied.</p>
-                </div>
+    </div>
+    </section>
+
+    <!-- About Profile and Skills Section ---------------------------->
+    <section class="about-profile-skills">
+        <div class="about">
+            <img src="44.jpg" alt="About Me" class="img1">
+            <div class="text">
+                <h2>About Me</h2>
+                <p>Hi' I am Memona Nisar , Studying In Software Engineering from PAF kiet University.I am Obssesed With Frontend Development and have to persue my career in this fied.</p>
             </div>
-            <div class="profile-skills">
-                <div class="profile-section">
-                    <h2>My Profile</h2>
-                    <p><strong>Education:</strong> Bachelor of Engineering in Software Engineering (BESE)</p>
-                    <p><strong>Experience:</strong> 3 Years in Web Development</p>
-                    <p><strong>Skills:</strong> HTML,CSS,JavaScript, Python, React, Node.js</p>
-                </div>
-                <div class="skills-section">
-                    <h2>Skills</h2>
-
-                    <div class="skill-item">
-                        <span class="skill-name">HTML</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Python</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">React</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Node.js</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 65%;"></div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="profile-skills">
+            <div class="profile-section">
+                <h2>My Profile</h2>
+                <p><strong>Education:</strong> Bachelor of Engineering in Software Engineering (BESE)</p>
+                <p><strong>Experience:</strong> 3 Years in Web Development</p>
+                <p><strong>Skills:</strong> HTML,CSS,JavaScript, Python, React, Node.js</p>
             </div>
-        </section>
+            <div class="skills-section">
+                <h2>Skills</h2>
 
-        <!-- Services and project Section ------------------------------------------->
-        <section class="services">
-            <div class="icon-1">
-                <h1>My Projects</h1>
-            </div>
-
-
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <div class="icon-wrapper">
-
-                            <i class="fa-solid fa-microchip"></i></i>
-                        </div>
-                        <h3>RFID Attendence System</h3>
-                        <p>This System Provides E-Attendence.Students just need to show their card.The system will mark him/her present.</p>
+                <div class="skill-item">
+                    <span class="skill-name">HTML</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="icon-wrapper">
-                            <i class="fa-solid fa-house-medical"></i>
-                        </div>
-                        <h3>Hospital System</h3>
-                        <p>This was for patients online treatment.The Project was made using C# and mysql.Desktop Application</p>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="icon-wrapper">
-                            <i class="fa-solid fa-fingerprint"></i>
-                        </div>
-                        <h3>Finger Print Attendence System</h3>
-                        <p>Attendence Through Finger print.This system Saves time. easy to understand and use.</p>
+                <div class="skill-item">
+                    <span class="skill-name">Python</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="icon-wrapper">
-                            <i class="fa-solid fa-user-minus"></i>
-                        </div>
-                        <h3>Forensic Investigation</h3>
-                        <p>This system recognize theifs and terrorist. easy to understand and use.It will helpful for police</p>
+                <div class="skill-item">
+                    <span class="skill-name">React</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="icon-wrapper">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
-                        <h3>chatBot</h3>
-                        <p>This product helps to generate pdf and download it directcly.Anytime type of pdf can be generated</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="icon-wrapper">
-                            <i class="fa-solid fa-network-wired"></i>
-                        </div>
-                        <h3>Online Reservation sys </h3>
-                        <p>Train tickets can be booked online using mobile,laptop or tablet etc.It saves Time of the traveler</p>
+                <div class="skill-item">
+                    <span class="skill-name">Node.js</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 65%;"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section --------------------------------------------->
-        <section class="contact">
-            <div class="contact-form">
-                <h3>My Contact</h3>
+    <!-- Services and project Section ------------------------------------------->
+    <section class="services">
+        <div class="icon-1">
+            <h1>My Projects</h1>
+        </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+
+                        <i class="fa-solid fa-microchip"></i></i>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                    </div>
+                    <h3>RFID Attendence System</h3>
+                    <p>This System Provides E-Attendence.Students just need to show their card.The system will mark him/her present.</p>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-house-medical"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+                    <h3>Hospital System</h3>
+                    <p>This was for patients online treatment.The Project was made using C# and mysql.Desktop Application</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-fingerprint"></i>
                     </div>
+                    <h3>Finger Print Attendence System</h3>
+                    <p>Attendence Through Finger print.This system Saves time. easy to understand and use.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-user-minus"></i>
+                    </div>
+                    <h3>Forensic Investigation</h3>
+                    <p>This system recognize theifs and terrorist. easy to understand and use.It will helpful for police</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>chatBot</h3>
+                    <p>This product helps to generate pdf and download it directcly.Anytime type of pdf can be generated</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Online Reservation sys </h3>
+                    <p>Train tickets can be booked online using mobile,laptop or tablet etc.It saves Time of the traveler</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section --------------------------------------------->
+    <section class="contact">
+        <div class="contact-form">
+            <h3>My Contact</h3>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
                 </div>
                 <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-        </section>
-
-
-
-
-        <!-- Footer ---------------------------------------------->
-        <section class="footer">
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h4>Info</h4>
-                    <ul class="links">
-                        <li><a href="#">About </a></li>
-                        <li><a href="#">Compressions</a></li>
-                        <li><a href="#">Customers</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Collection</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Explore</h4>
-                    <ul class="links">
-                        <li><a href="#">Free Designs</a></li>
-                        <li><a href="#">Latest Designs</a></li>
-                        <li><a href="#">Themes</a></li>
-                        <li><a href="#">Popular Designs</a></li>
-                        <li><a href="#">Art Skills</a></li>
-                        <li><a href="#">New Uploads</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul class="links">
-                        <li><a href="#">Customer Agreement</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Media Kit</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>
-                        Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
-                    </p>
-                    <form action="#">
-                        <input type="text" placeholder="Your email" required>
-                        <button type="submit">SUBSCRIBE</button>
-                    </form>
-                    <div class="icons">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-github"></i>
-                    </div>
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
                 </div>
             </div>
-            <div class="footer-bottom">
-                <hr>
-                <p>&copy; 2024 Memona Nisar. All Rights Reserved | <a href="#">Privacy Policy</a></p>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+                </div>
             </div>
-        </section>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </section>
 
 
 
 
-</body>
-
-</html>
+    <!-- Footer ---------------------------------------------->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul class="links">
+                    <li><a href="#">About </a></li>
+                    <li><a href="#">Compressions</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Collection</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="links">
+                    <li><a href="#">Free Designs</a></li>
+                    <li><a href="#">Latest Designs</a></li>
+                    <li><a href="#">Themes</a></li>
+                    <li><a href="#">Popular Designs</a></li>
+                    <li><a href="#">Art Skills</a></li>
+                    <li><a href="#">New Uploads</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Media Kit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; 2024 Memona Nisar. All Rights Reserved | <a href="#">Privacy Policy</a></p>
+        </div>
+    </section>
